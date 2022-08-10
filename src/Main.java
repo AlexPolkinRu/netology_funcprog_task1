@@ -30,7 +30,7 @@ public class Main {
                 " aliquam. Dictumst vestibulum rhoncus est pellentesque elit. Vitae elementum curabitur" +
                 " vitae nunc sed velit. Lectus magna fringilla urna porttitor rhoncus dolor purus.";
 
-        Function<String, List<String>> dictionary = (s) -> Arrays.stream(s.split("\\W"))
+        Function<String, List<String>> dictionary = s -> Arrays.stream(s.split("\\W"))
                 .map(w -> w.toLowerCase(Locale.ROOT))
                 .sorted()
                 .distinct()
